@@ -1,0 +1,36 @@
+<%namespace name='static' file='static_content.html'/>
+<%!
+from django.utils.translation import ugettext as _
+from django.core.urlresolvers import reverse
+from courseware.courses import course_image_url, get_course_about_section
+%>
+<%page args="course" />
+<article class="course bb_blue" id="${course.id | h}" role="region" aria-label="${get_course_about_section(course, 'title')}">
+  <a href="${reverse('about_course', args=[course.id.to_deprecated_string()])}">
+    <header class="course-image">
+      <div class="cover-image">
+        <img src="${course_image_url(course)}" alt="${get_course_about_section(course, 'title')} ${course.display_number_with_default}" />
+        <div class="learn-more" aria-hidden=true>${_("LEARN MORE")}</div>
+      </div>
+    </header>
+	
+    <section class="row course_info" aria-hidden=true>
+		<div class="col-xs-12 col-sm-6">
+			<span class="course-code">${course.display_number_with_default}</span>
+			<div class="course-date" aria-hidden="true">${_("Starts")}: ${course.start_datetime_text()}</div>
+			<div class="fal"></div>
+		</div>
+		<div class="col-xs-12 col-sm-6">
+			<span class="course-title">${get_course_about_section(course, 'title')}</span> <br />
+			<!--(<span class="course-organization">${get_course_about_section(course, 'university')}</span>) -->
+		</div>
+	</section>
+    <div class="sr">
+      <ul>
+		  <li>${get_course_about_section(course, 'university')}</li>
+		  <li>${course.display_number_with_default}</li>
+		  <li>${_("Starts")}: <time itemprop="startDate" datetime="${course.start_datetime_text()}">${course.start_datetime_text()}</time></li>
+		</ul>
+    </div>
+  </a>
+</article>
