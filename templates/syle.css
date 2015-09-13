@@ -3,15 +3,16 @@
 .fl {float: left;}
 .fr {float: right;}
 .cp {cursor: pointer;}
+.dn {display: none;}
 
 body {font-family: Verdana;}
 
 a, a:hover, a:active, a:focus {outline: 0;}
 
-header.global {background: rgba(235, 246, 252, 0.75);border: 0;z-index: 3;height: auto;}
-header.global nav {max-width: 1201px;padding: 0;position: relative;height: auto;color: #003e6d;}
-header.global nav .container {padding: 0;max-width: 100%;width: 100%;position: relative;}
-.dn {display: none;}
+header.global.nav_box {background: rgba(235, 246, 252, 0.75);border: 0;z-index: 3;height: auto;padding: 0;}
+header.global.nav_box nav {max-width: 1201px;padding: 0;position: relative;height: auto;color: #003e6d;}
+header.global.nav_box nav .container {padding: 0;max-width: 100%;width: 100%;position: relative;}
+header.global.slim .menu_margin {margin: 0.3em 1em 0 0;}
 
 header.global nav .logo {margin-right: 1em;height: auto;z-index: 3;}
 
@@ -21,7 +22,7 @@ header.global .nav-courseware {margin: 1em 0 0 1em;}
 header.global .navbar-nav li .cta ,
 header.global .nav-global li .cta ,
 header.global .nav-courseware li .cta {color: #20567f;background: #fff;border: 1px solid #40b4e6;border-radius: 4px;padding: 0.3em 0.6em;font-size: 0.8em;
-	text-transform: uppercase}
+	text-transform: uppercase;box-shadow: none;}
 .btn_border {display: inline-block;}
 
 header.global .nav-global li .cta :hover,
@@ -104,7 +105,7 @@ header.global .user > .primary > a {padding-bottom: 0;height: 100%;}
 .courses-listing-item .course_info .course-title,
 .course_info .course-title{font-weight: bold;}
 .courses-listing-item .course_info .fal,
-.course_info .fal {width: 1px;height: 80%;position:absolute;top: 10%;right:0;background-color: gray}
+.course_info .fal {width: 1px;height: 80%;position:absolute;top: 10%;right:0;background-color: gray;}
 
 
 
@@ -127,17 +128,48 @@ header.global .user > .primary > a {padding-bottom: 0;height: 100%;}
 
 .course_details .details .inner-wrapper {padding: 1em;}
 
-#modal_clone {bottom: auto;width: 604px;}
-.modal.video-modal .inner-wrapper {height: auto;width: auto;}
-
 /* course_about.html  <-  */
 
 
+#modal_clone {bottom: auto;width: 604px;}
+.modal.video-modal .inner-wrapper {height: auto;width: auto;}
 
 
+/* courses  ->  */
+
+.find-courses header.search {background: #fbfbfb url("/static/themes/memooc/images/MeMOOC/bg_buborek_full.png") no-repeat center center / auto;
+    height: 340px;margin-top: -76px;box-shadow: none;}
+.find-courses header.search .inner-wrapper.main-search {padding-top: 10em;}
+.find-courses header.search .inner-wrapper.main-search .logo {border: 0;}
+
+/*.find-courses .courses-container {padding-top: 0;}*/
+.find-courses .courses-container .courses .courses-listing li {padding: 0 0.5em;min-height: 21em;}
+.courses-container .courses .course {margin-bottom: 0;}
+.find-courses .courses {padding-top: 0;}
+.find-courses .courses > h1.title {color: #003e6d;margin-top: 0;}
+
+#filter_box h2,
+#filter_box h3,
+#filter_box h4 {font-size: 1.2em;}
+#filter_box ul {list-style-type: none;padding-left: 1em;}
+#filter_box ul li.selected {border: 1px solid #40b4e6;background-color: rgba(64, 180, 230, 0.2);border-radius: 2px;}
+#filter_box ul a {cursor: pointer;text-decoration: none;display: block;padding: 0.2em;}
+#filter_box #search_title {margin: 0.2em;width: 100%;text-transform: none;}
+
+.container > div {border: 0;box-shadow: none;width: auto;background-color: transparent;}
+header.global.slim h2 {margin-top: 0.2em;}
+
+/* courses  <-  */
+
+/* dashboard  ->  */
+
+.dashboard .my-courses .course .details .course-info {background-color: transparent;margin: 0;}
+.dashboard .my-courses .course .details .course-title {margin: 0;padding: 0;}
+.dashboard .my-courses .course .details .course-title a,
+.dashboard .my-courses .course .details .course-title span {line-height: normal;margin: 0;}
 
 
-
+/* dashboard  <-  */
 
 
 
@@ -159,7 +191,7 @@ header.global .user > .primary > a {padding-bottom: 0;height: 100%;}
   header.global .search input.cta {width: 100%;}
   #navbar {background-color: #ebebec;}
   header.global .fix_menu li {border: 0;padding: 0.2em 2em;}
-  .courses-container .courses .course .course-image .cover-image {height: auto;}
+  .courses-container .courses .course .course-image .cover-image {min-height:11.6em;height: auto;}
   .courses-listing-item .course_info .course-date,
   .home .home_course_box .course_info .course-date {margin: 0 0 1em 0;}
 }

@@ -37,7 +37,7 @@ from status.status import get_site_status_msg
 	% endif
 </%block>
 
-<header id="global-navigation" class="global ${"slim" if course else ""}" >
+<header id="global-navigation" class="global ${"slim" if course else ""} nav_box" >
 	<nav class="navbar navbar-default0" aria-label="${_('Global')}">
 		<div class="container">
 			<div class="navbar-header">
@@ -71,8 +71,19 @@ from status.status import get_site_status_msg
 				</ul>
 				<ul class="nav navbar-nav menu_margin search">
 					<li>
-						<span class="fa fa-search"></span>
-						<input class="cta" type="text" name="search_text" placeholder="${_("Search our courses")}"  />
+						<form id="search_menu_form" action="${marketing_link('COURSES')}" method="post">
+							<input type="hidden" name="csrfmiddlewaretoken" value="${ csrf_token }">
+							<span class="fa fa-search"></span>
+							<input class="cta" type="text" name="search_text" placeholder="${_("Search our courses")}"  />
+						</form>
+						<script>
+							$('.input').keypress(function (e) {
+							  if (e.which == 13) {
+								$('#search_menu_form').submit();
+								return false;    //<---- Add this line
+							  }
+							});
+						</script>
 					</li>
 				</ul>
 				
@@ -82,20 +93,7 @@ from status.status import get_site_status_msg
 				</ul>
 				-->
 				
-				
-				% if course:
-					<h2 class="course-header"><span class="provider">${course.display_org_with_default | h}:</span>
-					  ${course.display_number_with_default | h}
-					  <%
-						display_name = course.display_name_with_default
-						if settings.FEATURES.get('CUSTOM_COURSES_EDX', False):
-						  ccx = get_current_ccx(course.id)
-						  if ccx:
-							display_name = ccx.display_name
-					  %>
-					  ${display_name}</h2>
-				% endif
-					
+
 				% if user.is_authenticated():
 					<ol class="left nav-global authenticated">
 					  <%block name="navigation_global_links_authenticated">
@@ -186,7 +184,21 @@ from status.status import get_site_status_msg
 						</li>
 					</ol>
 				% endif
-				
+
+
+				% if course:
+					<h2 class="course-header"><span class="provider">${course.display_org_with_default | h}:</span>
+					  ${course.display_number_with_default | h}
+					  <%
+						display_name = course.display_name_with_default
+						if settings.FEATURES.get('CUSTOM_COURSES_EDX', False):
+						  ccx = get_current_ccx(course.id)
+						  if ccx:
+							display_name = ccx.display_name
+					  %>
+					  ${display_name}</h2>
+				% endif
+
 				
 				<div class="flags_box">  
 					% if not user.is_authenticated():

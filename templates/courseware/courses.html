@@ -61,7 +61,8 @@
     <div class="inner-wrapper main-search">
       <hgroup>
         <div class="logo">
-          <img src="${logo_file}" alt="${logo_alt_text}" />
+          <img src="${logo_file}" alt="${logo_alt_text}" style="display: none" />
+          <img src="${static.url('themes/memooc/images/MeMOOC/logo_memooc.png')}" alt="${logo_alt_text}" />
         </div>
         <h2>${course_index_overlay_text}</h2>
       </hgroup>
@@ -71,33 +72,76 @@
   <section class="courses-container">
 
     % if course_discovery_enabled:
-    <div id="discovery-form" role="search" aria-label="course">
-      <form>
-        <input class="discovery-input" placeholder="${_('Search for a course')}" type="text"/><!-- removes spacing
-        --><button type="submit" class="button postfix discovery-submit" aria-label="${_('Search')}">
-          <i class="icon fa fa-search" aria-hidden="true"></i>
-        </button>
-      </form>
-      <div id="discovery-message"></div>
-      <div aria-live="polite" aria-relevant="all">
-        <div id="loading-indicator" class="hidden">
-          <i class="icon fa fa-spinner fa-spin"></i> ${_('Loading')}
-        </div>
-      </div>
-    </div>
+		<div id="discovery-form" role="search" aria-label="course">
+		  <form>
+			<input class="discovery-input" placeholder="${_('Search for a course')}" type="text"/><!-- removes spacing
+			--><button type="submit" class="button postfix discovery-submit" aria-label="${_('Search')}">
+			  <i class="icon fa fa-search" aria-hidden="true"></i>
+			</button>
+		  </form>
+		  <div id="discovery-message"></div>
+		  <div aria-live="polite" aria-relevant="all">
+			<div id="loading-indicator" class="hidden">
+			  <i class="icon fa fa-spinner fa-spin"></i> ${_('Loading')}
+			</div>
+		  </div>
+		</div>
 
-    <div id="filter-bar" class="filters hide-phone">
-    </div>
+		<div id="filter-bar" class="filters hide-phone">
+		</div>
     % endif
 
     <section class="courses${'' if course_discovery_enabled else ' no-course-discovery'}">
-      <ul class="courses-listing">
-        %for course in courses:
-        <li class="courses-listing-item">
-          <%include file="../course.html" args="course=course" />
-        </li>
-        %endfor
-      </ul>
+		<h1 class="title">${_('Courses')}</h1>
+		<div class="row">
+			<div class="col-xs-12 visible-xs-block">
+				<a class="btn btn-primary btn-lg btn-block" href="#filter_box">${_("Go to filter")}</a>
+			</div>
+			<div class="col-xs-12 col-sm-10 col-md-10">
+				<ul class="courses-listing row">
+					%for course in courses:
+						<li class="courses-listing-item0 col-xs-12 col-sm-6 col-md-4 parent_staus">
+						  <%include file="../course.html" args="course=course" />
+						</li>
+					%endfor
+				</ul>
+			</div>
+			<div id="filter_box" class="col-xs-12 col-sm-2 col-md-2" style="background-color: rgba(235, 246, 252, 0.75);">
+				<h2>${_("Filter")}</h2>
+				<input id="search_title" class="btn_border" value="" placeholder="${_("Title")}" />
+				%for key in filter_conf.keys():
+					## ${filter_conf[key]}
+					<% filter = filter_conf[key] %>
+					<section class="filter_box">
+						 <%include file="../filter.html" args="key=key, filter=filter" />
+					</section>
+				%endfor
+			</div>
+			<script>
+				$( "#search_title" ).keydown(function(event) {
+					setTimeout(function(){
+						$('.course_info .course-title').each(function( index, element ) {
+							var search_text = $("#search_title").attr('value').toLowerCase();
+							var display_val = 'block';
+
+							if ($(element).html().toLowerCase().indexOf(search_text) == -1) {
+								display_val = 'none';
+							}
+							$(this).closest('.parent_staus').css('display', display_val);
+						})
+					}, 500);
+				});
+				%if 'search_text' in req_POST:
+					var $st = $('#search_title');
+					$st.focus();
+					$st.attr('value', "${req_POST['search_text']}");
+					var e = jQuery.Event("keydown");
+					e.which = 13; // # Some key code value
+					$st.trigger(e);
+				%endif
+			</script>
+		</div>
+
     </section>
 
 

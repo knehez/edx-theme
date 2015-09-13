@@ -1,0 +1,31 @@
+<%namespace name='static' file='static_content.html'/>
+<%!
+from django.utils.translation import ugettext as _
+from django.core.urlresolvers import reverse
+from courseware.courses import course_image_url, get_course_about_section
+%>
+<%page args="key, filter" />
+
+<article class="">
+	<h3>${_(filter['title'])}</h3>
+	<form action="" method="post" id="form_id_${key}">
+		<input type="hidden" name="csrfmiddlewaretoken" value="${ csrf_token }">
+		<input type="hidden" name="key" value="${key}" />
+		<input id="id_${key}" type="hidden" name="" value="" />
+		<ul>
+			%for k, v in filter['show_list'].items():
+				<li class=" ${'' if filter["selected"] != k else ' selected'}">
+					<a onclick=" setFilterParams('${key}', 'list_key', '${k}')">${_(v)}</a>
+				</li>
+			%endfor
+		</ul>
+
+	</form>
+</article>
+<script>
+	function setFilterParams(key, name, value) {
+		$('#id_' + key).attr('name', name);
+		$('#id_' + key).attr('value', value);
+		$('#form_id_' + key).submit();
+	}
+</script>
