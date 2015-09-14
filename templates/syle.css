@@ -71,7 +71,7 @@ header.global .user > .primary > a {padding-bottom: 0;height: 100%;}
 
 
 .home > header .row.home_big_banner {padding: 0;margin: 0 auto;max-width: 1201px;clear: both;
-	background: #fbfbfb url("/static/themes/memooc/images/MeMOOC/Optimized_home_bg.png") no-repeat;}
+	background: #fbfbfb url("/static/themes/memooc/images/MeMOOC/Optimized_home_bg.jpg") no-repeat;}
 .home_bg img {position: relative;margin: -50px 0 0 0;}
 .home_bg img.home_uom {position: relative;margin: -15px 0 0 -7px;}
 .home_bg_bubble {position: relative; min-height: 332px;}
