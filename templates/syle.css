@@ -5,16 +5,21 @@
 .cp {cursor: pointer;}
 .dn {display: none;}
 
-body {font-family: Verdana;}
+body {font-family: Verdana, "Helvetica Neue",Helvetica,Arial,sans-serif;}
 
 a, a:hover, a:active, a:focus {outline: 0;}
+/*
+a, a:hover, a:active, a:focus, a:link,
+.course-index div#accordion ul.ui-accordion-content li a p,
+header.global.slim h2 .provider {font-family: Verdana, "Helvetica Neue",Helvetica,Arial,sans-serif;}
+*/
 
 header.global.nav_box {background: rgba(235, 246, 252, 0.75);border: 0;z-index: 3;height: auto;padding: 0;}
 header.global.nav_box nav {max-width: 1201px;padding: 0;position: relative;height: auto;color: #003e6d;}
 header.global.nav_box nav .container {padding: 0;max-width: 100%;width: 100%;position: relative;}
 header.global.slim .menu_margin {margin: 0.3em 1em 0 0;}
 
-header.global nav .logo {margin-right: 1em;height: auto;z-index: 3;}
+header.global nav .logo {margin-right: 1em;height: auto;z-index: 3;width: 176px;min-height: 40px;}
 
 header.global .nav-global ,
 header.global .nav-courseware {margin: 1em 0 0 1em;}
@@ -137,7 +142,7 @@ header.global .user > .primary > a {padding-bottom: 0;height: 100%;}
 
 /* courses  ->  */
 
-.find-courses header.search {background: #fbfbfb url("/static/themes/memooc/images/MeMOOC/bg_buborek_full.png") no-repeat center center / auto;
+.find-courses header.search {background: #fbfbfb url("/static/themes/memooc/images/MeMOOC/bg_buborek_full-min.png") no-repeat center center / auto;
     height: 340px;margin-top: -76px;box-shadow: none;}
 .find-courses header.search .inner-wrapper.main-search {padding-top: 10em;}
 .find-courses header.search .inner-wrapper.main-search .logo {border: 0;}
@@ -158,6 +163,8 @@ header.global .user > .primary > a {padding-bottom: 0;height: 100%;}
 
 .container > div {border: 0;box-shadow: none;width: auto;background-color: transparent;}
 header.global.slim h2 {margin-top: 0.2em;}
+
+.content-wrapper .progress {height: auto;}
 
 /* courses  <-  */
 

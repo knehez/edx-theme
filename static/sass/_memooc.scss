@@ -8,7 +8,7 @@
 //-----------------
 //  Color variables (from Stanford palette unless noted)
 //-----------------
-/*
+
 //Main Color Variables
 $main-color: #f7691f;$main-color: #40b4e6;
 $dark-color: #ea281f;$dark-color: #003e6d; //Link Color
@@ -43,7 +43,7 @@ $black-80: #585858;
 //  Font Assignment
 //-----------------
 
-$theme-sans-font: 'Source Sans';
+$theme-sans-font: 'Verdana';
 $sans-serif: $theme-sans-font, $sans-serif;
 $body-font-family: $sans-serif;
 
@@ -205,4 +205,4 @@ $video-thumb-url: '../themes/memooc/images/edx.png';
 @mixin footer_references_style {
     margin: 0 !important;
     text-align: right;
-}*/
+}
