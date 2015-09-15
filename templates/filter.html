@@ -8,7 +8,7 @@ from courseware.courses import course_image_url, get_course_about_section
 
 <article class="">
 	<h3>${_(filter['title'])}</h3>
-	<form action="" method="post" id="form_id_${key}">
+	<form action="" method="get" id="form_id_${key}">
 		<input type="hidden" name="csrfmiddlewaretoken" value="${ csrf_token }">
 		<input type="hidden" name="key" value="${key}" />
 		<input id="id_${key}" type="hidden" name="" value="" />
