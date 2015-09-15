@@ -100,7 +100,7 @@
 			<div class="col-xs-12 col-sm-10 col-md-10">
 				<ul class="courses-listing row">
 					%for course in courses:
-						<li class="courses-listing-item0 col-xs-12 col-sm-6 col-md-4 parent_staus">
+						<li class="courses-listing-item0 col-xs-12 col-sm-6 col-md-4 parent_status">
 						  <%include file="../course.html" args="course=course" />
 						</li>
 					%endfor
@@ -109,11 +109,11 @@
 			<div id="filter_box" class="col-xs-12 col-sm-2 col-md-2" style="background-color: rgba(235, 246, 252, 0.75);">
 				<h2>${_("Filter")}</h2>
 				<input id="search_title" class="btn_border" value="" placeholder="${_("Title")}" />
-				%for key in filter_conf.keys():
+				%for item in filter_conf:
 					## ${filter_conf[key]}
-					<% filter = filter_conf[key] %>
+					<% filter = item[1] %>
 					<section class="filter_box">
-						 <%include file="../filter.html" args="key=key, filter=filter" />
+						 <%include file="../filter.html" args="key=item[0], filter=filter" />
 					</section>
 				%endfor
 			</div>
@@ -127,7 +127,7 @@
 							if ($(element).html().toLowerCase().indexOf(search_text) == -1) {
 								display_val = 'none';
 							}
-							$(this).closest('.parent_staus').css('display', display_val);
+							$(this).closest('.parent_status').css('display', display_val);
 						})
 					}, 500);
 				});
