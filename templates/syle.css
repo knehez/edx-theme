@@ -64,7 +64,7 @@ header.global .user > .primary > a {padding-bottom: 0;height: 100%;}
 
 
 
-.content-wrapper {position: relative;}
+.content-wrapper {position: relative; padding-bottom: 0px;}
 .course-info header.course-profile,
 .home > header {background: #fbfbfb url("/static/themes/memooc/images/MeMOOC/bg_buborek_full-min.png") no-repeat center center / auto;
 	margin-top: 0;height: auto;border: 0;box-shadow: none;overflow: visible;}
@@ -167,11 +167,18 @@ header.global .user > .primary > a {padding-bottom: 0;height: 100%;}
 #filter_box ul a {cursor: pointer;text-decoration: none;display: block;padding: 0.2em;}
 #filter_box #search_title {margin: 0.2em;width: 100%;text-transform: none;}
 
-.container > div {border: 0;box-shadow: none;width: auto;background-color: transparent;}
+.container > div {border: 0;box-shadow: none; background-color: transparent;}
 header.global.slim h2 {margin-top: 0.2em;}
 
 .content-wrapper .progress {height: auto;}
+.wrapper-footer {
+    background: rgba(235, 246, 252, 0.75) none repeat scroll 0 0;
+    padding: 10px 10px 10px;
+}
 
+.wrapper-footer footer#footer-openedx .colophon .nav-colophon li a {
+    color: #003e6d;
+}
 /* courses  <-  */
 
 /* dashboard  ->  */
