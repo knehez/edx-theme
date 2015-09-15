@@ -150,7 +150,7 @@ header.global .user > .primary > a {padding-bottom: 0;height: 100%;}
 .find-courses header.search .inner-wrapper.main-search .logo {border: 0;}
 
 /*.find-courses .courses-container {padding-top: 0;}*/
-.find-courses .courses-container .courses .courses-listing li {padding: 0 0.5em;min-height: 21em;}
+.find-courses .courses-container .courses .courses-listing li {padding: 0 0.5em;min-height: 18em;}
 .courses-container .courses .course {margin-bottom: 0;}
 .find-courses .courses {padding-top: 0;}
 .find-courses .courses > h1.title {color: #003e6d;margin-top: 0;}
@@ -167,6 +167,7 @@ header.global .user > .primary > a {padding-bottom: 0;height: 100%;}
 #filter_box ul a {cursor: pointer;text-decoration: none;display: block;padding: 0.2em;}
 #filter_box #search_title {margin: 0.2em;width: 100%;text-transform: none;}
 
+.container > .navbar-header {width: auto;}
 .container > div {border: 0;box-shadow: none; background-color: transparent;}
 header.global.slim h2 {margin-top: 0.2em;}
 
