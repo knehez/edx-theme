@@ -128,7 +128,7 @@ header.global .user > .primary > a {padding-bottom: 0;height: 100%;}
 #content .course-info .course_details > div section {background-color: #fbfbfb;width: 100%;border: 0;}
 
 #content .course_short_text_box .cstb_title {font-size: 1.5em;text-align: left;color: #003e6d;}
-#content .overview_box {height: 12em;overflow: hidden;color: gray;}
+#content .overview_box {height: 12em;overflow: hidden;color: gray;font-weight: bold;}
 #content .main-cta {margin: 1em 5em;text-align: right;}
 
 .course-info .course-sidebar > section.course-summary {margin-bottom: 0;}
@@ -140,6 +140,12 @@ header.global .user > .primary > a {padding-bottom: 0;height: 100%;}
 .course_about_img_box {position: relative;line-height: 100%;display: table;}
 .course_about_img_box .media {vertical-align: middle;}
 .course_about_img_box .media .hero {max-height: 150px;overflow: hidden;}
+
+.details h1,
+.details h2,
+.details h3,
+.details h4 {color: #003e6d;}
+
 
 /* course_about.html  <-  */
 
