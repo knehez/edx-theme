@@ -119,7 +119,7 @@ from edxmako.shortcuts import marketing_link
 
 	<header class="course-profile">
 		<div class="intro-inner-wrapper row">
-			<div class="col-xs-12 col-sm-4 col-md-4">
+			<div class="col-xs-12 col-sm-4 col-md-4 course_about_img_box">
 				<!--iframe width="350" height="196" src="https://www.youtube.com/embed/jGflUbPQfW8?list=PL31B2D5FF605695B4" frameborder="0" allowfullscreen></iframe-->
 				% if get_course_about_section(course, "video"):
 				  <a href="#video-modal" class="media" rel="leanModal">
@@ -147,7 +147,8 @@ from edxmako.shortcuts import marketing_link
 				</h1>
 
 				<div class="inner-wrapper overview_box cb">
-					${get_course_about_section(course, "overview")}
+					## ${get_course_about_section(course, "overview")}
+					${get_course_about_section(course, "short_description")}
 				</div>
 
 				<div style="float: left;display: none">
