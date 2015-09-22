@@ -108,6 +108,7 @@
 			</div>
 			<div id="filter_box" class="col-xs-12 col-sm-2 col-md-2" style="background-color: rgba(235, 246, 252, 0.75);">
 				<h2>${_("Filter")}</h2>
+				<label for="search_title" class="label_dn">${_("Search title")}</label>
 				<input id="search_title" class="btn_border" value="" placeholder="${_("Title")}" />
 				%for item in filter_conf:
 					## ${filter_conf[key]}
@@ -131,14 +132,15 @@
 						})
 					}, 500);
 				});
-				%if 'search_text' in req_POST:
+				%if 'search_text' in req_data:
 					var $st = $('#search_title');
 					$st.focus();
-					$st.attr('value', "${req_POST['search_text']}");
+					$st.attr('value', "${req_data['search_text']}");
 					var e = jQuery.Event("keydown");
 					e.which = 13; // # Some key code value
 					$st.trigger(e);
 				%endif
+
 			</script>
 		</div>
 

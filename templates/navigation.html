@@ -71,10 +71,11 @@ from status.status import get_site_status_msg
 				</ul>
 				<ul class="nav navbar-nav menu_margin search">
 					<li>
-						<form id="search_menu_form" action="${marketing_link('COURSES')}" method="post">
+						<form id="search_menu_form" action="${marketing_link('COURSES')}" method="get">
 							<input type="hidden" name="csrfmiddlewaretoken" value="${ csrf_token }">
 							<span class="fa fa-search"></span>
-							<input class="cta" type="text" name="search_text" placeholder="${_("Search our courses")}"  />
+							<label class="label_dn" for="nav_search"></label>
+							<input id="nav_search" class="cta" type="text" name="search_text" placeholder="${_("Search our courses")}"  />
 						</form>
 						<script>
 							$('.input').keypress(function (e) {

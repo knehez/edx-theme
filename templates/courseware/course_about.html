@@ -124,14 +124,14 @@ from edxmako.shortcuts import marketing_link
 				% if get_course_about_section(course, "video"):
 				  <a href="#video-modal" class="media" rel="leanModal">
 					<div class="hero">
-					  <img src="${course_image_url(course)}" alt="" />
+					  <img src="${course_image_url(course)}" alt="${_("the image of courses")}" />
 					  <div class="play-intro"></div>
 					</div>
 				  </a>
 				%else:
 				  <div class="media">
 					<div class="hero">
-					  <img src="${course_image_url(course)}" alt="" />
+					  <img src="${course_image_url(course)}" alt="${_("the image of courses")}" />
 					</div>
 				  </div>
 				% endif
