@@ -109,8 +109,10 @@ from microsite_configuration import microsite
       youtube_video_id = homepage_promo_video_youtube_id
       if self.stanford_theme_enabled():
         youtube_video_id = "2gmreZObCY4"
+      youtube_video_id = "MJZN700YS0o"
     %>
-    <iframe title="YouTube Video" width="640" height="360" src="//www.youtube.com/embed/${youtube_video_id}?showinfo=0" frameborder="0" allowfullscreen></iframe>
+    ## caused accessibility audit error
+	##    <iframe title="YouTube Video" width="640" height="360" src="//www.youtube.com/embed/${youtube_video_id}?showinfo=0" frameborder="0" allowfullscreen></iframe>
   </div>
 </section>
 
