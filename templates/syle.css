@@ -236,7 +236,7 @@ header.global.slim h2 {margin-top: 0.2em;}
 
 /* registration  <-  */
 
-
+.slick-header-column.ui-state-default {height: auto;}
 
 
 
