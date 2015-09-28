@@ -206,6 +206,36 @@ header.global.slim h2 {margin-top: 0.2em;}
 
 /* dashboard  <-  */
 
+/* registration  ->  */
+
+.login-register .action-primary {font-weight: 600;letter-spacing: normal;margin-top: 1em;padding: 10px;text-transform: none;width: 100%;}
+.login-register .login-provider {border-color: #c8c8c8;height: 35px;margin-bottom: 20px;margin-right: 5px;padding: 0 0 0 40px;
+    position: relative;text-align: left;text-shadow: none;text-transform: none;width: 130px;}
+.login-register .login-provider .icon {background: #126f9a none repeat scroll 0 0;bottom: -1px;color: #fff;left: 0;line-height: 35px;
+    position: absolute;text-align: center;top: -1px;width: 30px;}
+.login-register .login-provider span {color: inherit;}
+.login-register .login-provider:hover,
+.login-register .login-provider:focus {background-image: none;box-shadow: none;}
+.login-register .login-provider:hover .icon,
+.login-register .login-provider:focus .icon {bottom: 0;line-height: 33px;top: 0;}
+.login-register .login-provider.button-oa2-google-oauth2 {color: #dd4b39;}
+.login-register .login-provider.button-oa2-google-oauth2 .icon {background: #dd4b39 none repeat scroll 0 0;}
+.login-register .login-provider.button-oa2-google-oauth2:hover,
+.login-register .login-provider.button-oa2-google-oauth2:focus {background-color: #dd4b39;border: 1px solid #a5382b;color: white;}
+.login-register .login-provider.button-oa2-google-oauth2:hover {box-shadow: 0 2px 1px 0 #8d3024;}
+.login-register .login-provider.button-oa2-facebook {color: #3b5998;}
+.login-register .login-provider.button-oa2-facebook .icon {background: #3b5998 none repeat scroll 0 0;}
+.login-register .login-provider.button-oa2-facebook:hover,
+.login-register .login-provider.button-oa2-facebook:focus {background-color: #3b5998;border: 1px solid #263a62;color: white;}
+.login-register .login-provider.button-oa2-facebook:hover {box-shadow: 0 2px 1px 0 #30487c;}
+.login-register .login-provider.button-oa2-linkedin-oauth2 {color: #0077b5;}
+.login-register .login-provider.button-oa2-linkedin-oauth2 .icon {background: #0077b5 none repeat scroll 0 0;}
+.login-register .login-provider.button-oa2-linkedin-oauth2:hover,
+.login-register .login-provider.button-oa2-linkedin-oauth2:focus {background-color: #0077b5;border: 1px solid #06527d;color: white;}
+.login-register .login-provider.button-oa2-linkedin-oauth2:hover {box-shadow: 0 2px 1px 0 #005d8e;}
+
+/* registration  <-  */
+
 
 
 

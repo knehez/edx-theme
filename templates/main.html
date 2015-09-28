@@ -138,7 +138,8 @@ from branding import api as branding_api
 % if style_overrides_file:
   <link rel="stylesheet" type="text/css" href="${static.url(style_overrides_file)}" />
 % endif
-	
+
+	<script type="text/javascript" src="${static.url('themes/memooc/js/function.js')}" charset="utf-8"></script>
 </head>
 
 <body class="${static.dir_rtl()} <%block name='bodyclass'/> lang_${LANGUAGE_CODE}">
@@ -180,7 +181,10 @@ from branding import api as branding_api
   % endif
 
   <%block name="js_extra"/>
-  <script type="text/javascript" src="${static.url('js/vendor/noreferrer.js')}" charset="utf-8"></script>
+
+	<script type="text/javascript" src="${static.url('js/vendor/noreferrer.js')}" charset="utf-8"></script>
+	<script type="text/javascript" src="${static.url('themes/memooc/js/memooc.js')}" charset="utf-8"></script>
+
 </body>
 </html>
 
