@@ -95,7 +95,7 @@ header.global .user > .primary > a {padding-bottom: 0;height: 100%;}
 .home .courses-container .highlighted-courses {padding: 0 10px;margin: 0 auto;max-width: 1200px;}
 .home .courses-container h1.title {color: #20567f;padding: 0.3em 0;text-transform: uppercase;margin: 0;background-color: #fff;width: 100%;}
 .home .courses-container .courses .course .course-image .cover-image::before,
-.home .courses-container .courses .course .course-image .cover-image {height: 149px;}
+.home .courses-container .courses .course .course-image .cover-image {max-height: 149px;}
 .home .highlighted-courses .courses {padding: 0;}
 .home .highlighted-courses .courses .home_course_box {padding: 0.3em;}
 .home .highlighted-courses .courses .course {border: 0;margin: 0;}
@@ -173,7 +173,9 @@ header.global .user > .primary > a {padding-bottom: 0;height: 100%;}
 .find-courses .courses > h1.title {color: #003e6d;margin-top: 0;}
 
 .courses-container .courses .course .course-image .cover-image::before,
-.courses-container .courses .course .course-image .cover-image {height: 118px;}
+.courses-container .courses .course .course-image .cover-image {height: 117px;}
+.courses-container .courses .course .course-image .cover-image
+    {background: url("/static/themes/memooc/images/MeMOOC/bg_course.png") repeat scroll -34px -17px;}
 .courses-container .courses .course .course-image .cover-image .learn-more {top: 20%;}
 
 #filter_box h2,
