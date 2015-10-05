@@ -111,6 +111,9 @@ header.global .user > .primary > a {padding-bottom: 0;height: 100%;}
 .courses-listing-item .course_info .course-date,
 .course_info .course-organization,
 .course_info .course-date {color: gray;font-size: 0.8em;margin: 2em 0 0 0;}
+.course_info .course-date {position: absolute;bottom: 0.5em;}
+.course_info .col-sm-5 {min-height: 7.5em;}
+.course_info .course-code {font-size: .8em;}
 .courses-listing-item .course_info .course-title,
 .course_info .course-title{font-weight: bold;}
 .courses-listing-item .course_info .fal,
@@ -194,6 +197,10 @@ header.global.slim h2 {margin-top: 0.2em;}
 .wrapper-footer footer#footer-openedx .colophon .nav-colophon li a {
     color: #003e6d;
 }
+
+.dashboard .my-courses .course .details .wrapper-course-image .cover,
+.dashboard .my-courses .course .details .wrapper-course-image a.fade-cover {border-width: 1px;}
+.wrapper-course-image .course-image {border-bottom: none;}
 /* courses  <-  */
 
 /* dashboard  ->  */
