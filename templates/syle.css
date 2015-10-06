@@ -100,6 +100,7 @@ header.global .user > .primary > a {padding-bottom: 0;height: 100%;}
 .home .highlighted-courses .courses .home_course_box {padding: 0.3em;}
 .home .highlighted-courses .courses .course {border: 0;margin: 0;}
 .home .highlighted-courses .courses .course.bb_blue {border-bottom: 3px solid #40b4e6;}
+.home .course_info .col-sm-5 {min-height: 5.5em;}
 
 .course-image,
 .course-image {border-bottom: 1px solid #40b4e6;}
