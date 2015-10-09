@@ -9,7 +9,8 @@
 
 body {font-family: Verdana, "Helvetica Neue",Helvetica,Arial,sans-serif;}
 
-a, a:hover, a:active, a:focus {outline: 0;}
+a, a:hover, a:active, a:focus,
+input[type="file"]:focus, input[type="checkbox"]:focus, input[type="radio"]:focus {outline: none;}
 /*
 a, a:hover, a:active, a:focus, a:link,
 .course-index div#accordion ul.ui-accordion-content li a p,
@@ -213,6 +214,7 @@ header.global.slim h2 {margin-top: 0.2em;}
 .dashboard .my-courses .course .details .course-title a,
 .dashboard .my-courses .course .details .course-title span {line-height: normal;margin: 0;}
 
+.unenroll-modal {bottom: auto;}
 
 /* dashboard  <-  */
 
@@ -244,9 +246,30 @@ header.global.slim h2 {margin-top: 0.2em;}
 .login-register .login-provider.button-oa2-linkedin-oauth2:focus {background-color: #0077b5;border: 1px solid #06527d;color: white;}
 .login-register .login-provider.button-oa2-linkedin-oauth2:hover {box-shadow: 0 2px 1px 0 #005d8e;}
 
+.login-register .toggle-form {margin-bottom: 6em;}
 /* registration  <-  */
 
 .slick-header-column.ui-state-default {height: auto;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
