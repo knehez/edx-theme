@@ -205,6 +205,10 @@ header.global.slim h2 {margin-top: 0.2em;}
 .dashboard .my-courses .course .details .wrapper-course-image .cover,
 .dashboard .my-courses .course .details .wrapper-course-image a.fade-cover {border-width: 1px;}
 .wrapper-course-image .course-image {border-bottom: none;}
+
+.discussion-article .post_user_profile_img {height: 1.5em;margin-top: -0.25em;}
+.discussion-article .response-header-content .post_user_profile_img {display: block;float: left;height: 2.5em;margin: 0 0.5em 0 0;}
+
 /* courses  <-  */
 
 /* dashboard  ->  */
