@@ -26,6 +26,14 @@
   <meta name="path_prefix" content="{{EDX_ROOT_URL}}">
 	<style>
 		{% include "syle.css" %}
+
+		.navbar .navbar-toggle {display: none;}
+		.navbar .navbar-header,
+		.navbar #navbar {float: left;width: auto;}
+		.navbar #navbar > ul {display: block;float: left;}
+		header.global .fix_menu li {display: block;float: left;}
+		header.global.slim h2 {float: none;position: absolute;bottom: .2em;}
+		header.global .user {position: absolute;right: 1em;}
 	</style>
 </head>
 
@@ -36,7 +44,8 @@
       {% if IS_EDX_DOMAIN %}
         {% include "navigation-edx.html" %}
       {% else %}
-        {# include "navigation.html" -------------------/	comment row 	/------------------ #}
+
+        {% include "navigation_django.html" %}
       {% endif %}
     {% endwith %}
     <div class="content-wrapper" id="content">

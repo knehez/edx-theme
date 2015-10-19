@@ -45,8 +45,9 @@ from status.status import get_site_status_msg
 					<i class="fa fa-bars"></i>
 				</button>
 				<a class="logo" href="${marketing_link('ROOT')}">
-					<%block name="navigation_logo"> ## overwrite theme-header.html
-						<img src="${static.url('themes/memooc/images/MeMOOC/logo.png')}" alt="${platform_name()}" />
+					<%block name="navigation_logo">
+						<!--img src="${static.url('themes/memooc/images/MeMOOC/logo.png')}" alt="${platform_name()}" /-->
+						<img src="${static.url('themes/memooc/images/MeMOOC/logo.png')}" height="50" alt="Home Page" />
 					</%block>
 				  </a>
 			</div>

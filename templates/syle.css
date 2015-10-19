@@ -46,7 +46,7 @@ header.global .fix_menu {border-radius: 5em/3em;background-color: rgba(241,249,2
 	margin: 0.8em 0 0 0;}
 header.global .fix_menu li {border-right: 1px solid #003e6d;margin: 0;padding: 0 1em;}
 header.global .fix_menu li:last-child {border-right: 0;}
-header.global .fix_menu li a {color: #003e6d;font-weight: normal;text-transform: uppercase;padding: 0;line-height: 1.3em;}
+header.global .fix_menu li a {color: #003e6d;font-weight: normal;text-transform: uppercase;padding: 0;line-height: 1.3em;font-size: .9em;}
 header.global .nav > li > a:focus,
 header.global .nav > li > a:hover {text-shadow: 2px 2px 5px #40b4e6;background: none;}
 
@@ -279,8 +279,11 @@ img.signatory-signature
 
 
 
+/* boostrap overwrite  ->  */
 
+.label {display: table-cell;}
 
+/* boostrap overwrite  <-  */
 
 
 
