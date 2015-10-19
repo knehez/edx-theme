@@ -258,8 +258,14 @@ header.global.slim h2 {margin-top: 0.2em;}
 
 
 
+/* bizonyitvany  ->  */
 
+.layout-accomplishment.certificate-honor .accomplishment-rendering .accomplishment-signatories .signatory img.signatory-signature,
+.wrapper-signatories .list-signatories .signatory img.signatory-signature,
+img.signatory-signature
+    {display: block;}
 
+/* bizonyitvany  <-  */
 
 
 
