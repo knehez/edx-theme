@@ -1,0 +1,73 @@
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+##<%block name="pagetitle">${_("Page Not Found")}</%block>
+
+% if request.COOKIES.get('django_language') == 'en':
+
+
+	<section class="outside-app tj">
+
+		<h1>MeMOOC Honor Code</h1>
+
+		<p>By enrolling in a course on MeMOOC you agree to the Honor Code below and any additional terms specific to a class. </p>
+		<br /><br />
+		<p>
+		By enrolling in an MeMOOC course, I agree that I will:
+		<ul class="center600">
+			<li>Accept the Rules and Regulations of University of miskolc, which can be found at this link
+				<a href="http://www.uni-miskolc.hu/szabalyzatok" target="_blank">http://www.uni-miskolc.hu/szabalyzatok</a></li>
+			<li>Complete all mid-terms and final exams with my own work and only my own work. I will not submit the work of any other person.</li>
+			<li>Maintain only one user account and not let anyone else use my username and/or password.</li>
+			<li>Not engage in any activity that would dishonestly improve my results, or improve or hurt the results of others.</li>
+			<li>Not post answers to problems that are being used to assess student performance.</li>
+		</ul>
+
+		<br /><br />
+		<h1>CHANGING THE HONOR CODE</h1>
+
+		<p>Please note that we review and may make changes to this Honor Code from time to time.
+			Any changes to this Honor Code will be effective immediately upon posting on this page,
+			with an updated effective date.  By accessing the Site after any changes have been made,
+			you signify your agreement on a prospective basis to the modified Honor Code and any changes
+			contained therein.  Be sure to return to this page periodically to ensure familiarity with the
+			most current version of this Honor Code.</p>
+	</section>
+
+
+% else:
+
+
+	<section class="outside-app tj">
+		<h1>MeMOOC Becsületkódex</h1>
+		<p>
+		Bármely MeMOOC kurzus felvételével a Becsületkódexet elfogadom és magamra nézve kötelezőnek tartom:
+		<br /><br />
+		Elfogadom a Miskolci Egyetem szabályzatait, amelyeket itt olvashatok
+			<a href="http://www.uni-miskolc.hu/szabalyzatok" target="_blank">http://www.uni-miskolc.hu/szabalyzatok</a><br />
+		Minden vizsga, beadandó feladat az én munkám és csakis az én munkám. Más munkáját nem adom be sajátomként.<br />
+		Csak egy felhasználói fiókot használok és a felhasználói nevemet, jelszavamat nem adom át másnak használatra.<br />
+		Tevékenységemmel nem bántok meg másokat.<br />
+		Nem válaszolok meg olyan kérdéseket, amelyeket mások értékelésére használnak</p>
+
+		<br /><br />
+		Bármely MeMOOC kurzus felvételével a Becsületkódexet elfogadom és magamra nézve kötelezőnek tartom:
+		<br /><br />
+		<ul>
+			<li>Elfogadom a Miskolci Egyetem szabályzatait, amelyeket itt olvashatok:
+				<a href="http://www.uni-miskolc.hu/szabalyzatok" target="_blank">http://www.uni-miskolc.hu/szabalyzatok</a></li>
+			<li>Minden vizsga, beadandó feladat az én munkám és csakis az én munkám. Más munkáját nem adom be sajátomként.</li>
+			<li>Csak egy felhasználói fiókot használok és a felhasználói nevemet, jelszavamat nem adom át másnak használatra.</li>
+			<li>Tevékenységemmel nem bántok meg másokat.</li>
+			<li>Nem válaszolok meg olyan kérdéseket, amelyeket mások értékelésére használnak.</li>
+		</ul>
+		<br /><br />
+		<h1>MeMOOC Becsületkódex megváltoztatása</h1>
+		<p>A MeMOOC fentartja a jogot, hogy a Becsületkódexet időről időre megváltoztassa. Minden változtatás a kihirdetéstől fogva hatályos. <br />
+		Amennyiben a kihirdetés után belépsz a MeMOOV oldalaira, elfogadod a módosított becsületkódexet. Ezért kérjük, hogy rendszeresen olvasd el a
+		Becsületkódex legfrissebb változatát
+		</p>
+	</section>
+
+
+% endif

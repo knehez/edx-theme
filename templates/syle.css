@@ -264,12 +264,17 @@ header.global.slim h2 {margin-top: 0.2em;}
 .wrapper-signatories .list-signatories .signatory img.signatory-signature,
 img.signatory-signature
     {display: block;}
-
+.accomplishment-statement__print p {text-align: center}
 /* bizonyitvany  <-  */
 
 
+/* static page  ->  */
+section.outside-app.tj {text-align: justify;min-width: 300px;max-width: 700px;}
+section.outside-app.tj p {min-width: 300px;max-width: 700px;}
+section.outside-app ul.center600 {max-width: 700px;margin: 0 auto;}
+section.outside-app.tj h1 {color: #126f9a;font-size: 1.4em;}
 
-
+/* static page  <-  */
 
 
 
@@ -306,3 +311,4 @@ img.signatory-signature
   .courses-listing-item .course_info .course-date,
   .home .home_course_box .course_info .course-date {margin: 0 0 1em 0;}
 }
+
