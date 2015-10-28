@@ -136,6 +136,7 @@ header.global .user > .primary > a {padding-bottom: 0;height: 100%;}
 .course-info {background-color: #ebebec;}
 .course-info header.course-profile {padding: 0;box-shadow: 0 1px 1px #003e6d;border-top: 3px solid #003e6d;border-bottom: 3px solid #003e6d;}
 .course-info header.course-profile .intro-inner-wrapper {width: 100%;box-shadow: none;border: 0;background-color: transparent;}
+.course-info header.course-profile .intro-inner-wrapper .media .hero {border: none;}
 .course-info header.course-profile > div > div {height: 200px;padding: 1em 0 0 0;}
 
 #content .course-info .container {max-width: 1200px;width: auto;padding: 0;margin: 0 auto;}
