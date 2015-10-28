@@ -17,7 +17,7 @@ from courseware.courses import course_image_url, get_course_about_section
     <section class="row course_info" aria-hidden=true>
 		<div class="col-xs-12 col-sm-5">
 			<span class="course-code">${course.display_number_with_default.replace('.', ' ').replace('_', ' ')}</span>
-			<div class="course-date" aria-hidden="true">${_("Starts")}: ${course.start_datetime_text()}</div>
+			<div class="course-date" aria-hidden="true">${_("Starts")}: <br />${course.start_datetime_text()}</div>
 			<div class="fal"></div>
 		</div>
 		<div class="col-xs-12 col-sm-7">
