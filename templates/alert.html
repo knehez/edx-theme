@@ -1,0 +1,41 @@
+<%!
+from time import strftime as time
+from django.utils.translation import ugettext as _
+%>
+
+<style>
+	#myModal {background: none;width: 100%;color: #003e6d;box-shadow: none;}
+</style>
+<!-- Button trigger modal -->
+##<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+##  Launch demo modal
+##</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Under construction!</h4>
+      </div>
+      <div class="modal-body">
+		  Kérlek vedd figyelembe a használat során, hogy jelenleg az oldal még fejlesztés alatt áll.<br />
+		  <br />
+		  A végleges változat <b>2015 november közepétől várható</b>.<br />
+		  <br />
+		  <span style="text-align: right;display: block;color: #003e6d;">a MeMOOC fejlesztői csapata</span>
+
+      </div>
+      <div class="modal-footer">
+##        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <!--button type="button" class="btn btn-primary">Save changes</button-->
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+	$('#myModal').modal('show');
+	setCookie('fejlesztes_alatt', '1');
+</script>

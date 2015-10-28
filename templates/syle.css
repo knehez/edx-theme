@@ -17,6 +17,12 @@ a, a:hover, a:active, a:focus, a:link,
 header.global.slim h2 .provider {font-family: Verdana, "Helvetica Neue",Helvetica,Arial,sans-serif;}
 */
 
+.memooc_btn:hover,
+.memooc_btn:link:hover,
+.memooc_btn {border: 1px solid #40b4e6;color: #20567f;padding: 0.2em;border-radius: 4px;padding: 0.3em 0.6em;
+    text-decoration: none;box-shadow: none;}
+
+
 header.global.nav_box {background: rgba(235, 246, 252, 0.75);border: 0;z-index: 3;height: auto;padding: 0;}
 header.global.nav_box nav {max-width: 1201px;padding: 0;position: relative;height: auto;color: #003e6d;}
 header.global.nav_box nav .container {padding: 0;max-width: 100%;width: 100%;position: relative;}
@@ -65,6 +71,8 @@ header.global .user {height: 2.3em;}
 header.global .user > .primary {height: 100%;}
 header.global .user > .primary > a {padding-bottom: 0;height: 100%;}
 
+
+.home_more_btn_box {padding: 1em;text-align: center;}
 
 
 .content-wrapper {position: relative; padding-bottom: 0px;}
