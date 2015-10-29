@@ -1,0 +1,43 @@
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+##<%block name="pagetitle">${_("Page Not Found")}</%block>
+
+<style>
+	section.outside-app.tj p {max-width: 450px;}
+</style>
+
+% if request.COOKIES.get('django_language') == 'en':
+
+
+	<section class="outside-app tj">
+
+		<h1>Contacts</h1>
+		<p>
+			In case of edX based MOOC system development, maintenance, supports questions, please contact: technical@memooc.hu
+			<br /><br />
+			Bug reports: bugs@memooc.hu
+			<br /><br />
+			<b style="display: block;text-align: right;">MeMOOC.hu developer team</b>
+			<br /><br />
+		</p>
+	</section>
+
+
+% else:
+
+
+	<section class="outside-app tj">
+		<h1>Kapcsolat</h1>
+		<p>
+		edX alapú MOOC rendszerek fejlesztésével, üzemeltetésével, tananyagkészítéssel kapcsolatban információ: info@memooc.hu
+		<br /><br />
+		Problémák bejelentése: bugs@memooc.hu
+		<br /><br />
+		<b style="display: block;text-align: right;">MeMOOC.hu fejlesztői csapat</b>
+		<br /><br />
+		</p>
+	</section>
+
+
+% endif

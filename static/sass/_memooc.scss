@@ -43,8 +43,9 @@ $black-80: #585858;
 //  Font Assignment
 //-----------------
 
-$theme-sans-font: 'Verdana';
-$sans-serif: $theme-sans-font, $sans-serif;
+$theme-sans-font: "Open Sans",​Arial,​Helvetica,​sans-serif;
+// $sans-serif: $theme-sans-font, $sans-serif;
+$sans-serif: $theme-sans-font;
 $body-font-family: $sans-serif;
 
 $theme-serif-font: 'Crimson Text';

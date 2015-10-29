@@ -7,14 +7,16 @@
 
 .label_dn {display: none;}
 
-body {font-family: Verdana, "Helvetica Neue",Helvetica,Arial,sans-serif;}
+
+body, h1, h2, h3, h4, h5, h6, p, p a:link, p a:visited, a, label
+{font-family: "Open Sans",Arial, "Helvetica Neue",Helvetica,Arial,sans-serif;}
 
 a, a:hover, a:active, a:focus,
 input[type="file"]:focus, input[type="checkbox"]:focus, input[type="radio"]:focus {outline: none;}
 /*
 a, a:hover, a:active, a:focus, a:link,
 .course-index div#accordion ul.ui-accordion-content li a p,
-header.global.slim h2 .provider {font-family: Verdana, "Helvetica Neue",Helvetica,Arial,sans-serif;}
+header.global.slim h2 .provider {font-family: "Open Sans",​Arial, "Helvetica Neue",Helvetica,Arial,sans-serif;}
 */
 
 .memooc_btn:hover,
@@ -114,18 +116,19 @@ header.global .user > .primary > a {padding-bottom: 0;height: 100%;}
 .course-image,
 .course-image {border-bottom: 1px solid #40b4e6;}
 .courses-listing-item .course_info,
-.course_info {padding: 0.2em;min-height: 6em;color: #003e6d;overflow: hidden;}
+.course_info {padding: 0.5em;min-height: 7em;color: #003e6d;overflow: hidden;}
 .courses-listing-item .course_info .col-md-6,
 .course_info .col-md-6 {height: 100%;}
 .courses-listing-item .course_info .course-organization,
 .courses-listing-item .course_info .course-date,
+.course_info span {font: 1em/1em "Open Sans",Arial,Helvetica,sans-serif;margin: 0 0 1em;display: block;}
 .course_info .course-organization,
 .course_info .course-date {color: gray;font-size: 0.8em;margin: 2em 0 0 0;}
 .course_info .course-date {position: absolute;bottom: 0.5em;}
 .course_info .col-sm-5 {min-height: 7.5em;}
 .course_info .course-code {font-size: .8em;}
 .courses-listing-item .course_info .course-title,
-.course_info .course-title{font-weight: bold;}
+.course_info .course-title {font-weight: bold;color: #3762b3;font-weight: normal;}
 .courses-listing-item .course_info .fal,
 .course_info .fal {width: 1px;height: 80%;position:absolute;top: 10%;right:0;background-color: gray;}
 
