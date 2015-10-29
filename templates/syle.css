@@ -128,7 +128,7 @@ header.global .user > .primary > a {padding-bottom: 0;height: 100%;}
 .course_info .col-sm-5 {min-height: 7.5em;}
 .course_info .course-code {font-size: .8em;}
 .courses-listing-item .course_info .course-title,
-.course_info .course-title {font-weight: bold;color: #3762b3;font-weight: normal;}
+.course_info .course-title {font-weight: bold;color: #3762b3;font-weight: bold;font-size: 1.15em;}
 .courses-listing-item .course_info .fal,
 .course_info .fal {width: 1px;height: 80%;position:absolute;top: 10%;right:0;background-color: gray;}
 
