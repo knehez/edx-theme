@@ -221,7 +221,10 @@ header.global.slim h2 {margin-top: 0.2em;}
 .discussion-article .post_user_profile_img {height: 1.5em;margin-top: -0.25em;}
 .discussion-article .response-header-content .post_user_profile_img {display: block;float: left;height: 2.5em;margin: 0 0.5em 0 0;}
 
+.xmodule_display.xmodule_SequenceModule .sequence-nav ol li a p {top: -100000px;}
+
 /* courses  <-  */
+
 
 /* dashboard  ->  */
 
