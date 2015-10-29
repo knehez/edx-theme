@@ -5,7 +5,10 @@ from django.core.urlresolvers import reverse
 from courseware.courses import course_image_url, get_course_about_section
 %>
 <%page args="key, filter" />
-
+<%
+	if key == 'org':
+		return
+%>
 <article class="">
 	<h3>${_(filter['title'])}</h3>
 	<form action="" method="get" id="form_id_${key}">
