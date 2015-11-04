@@ -165,6 +165,8 @@ header.global .user > .primary > a {padding-bottom: 0;height: 100%;}
 .details h3,
 .details h4 {color: #003e6d;}
 
+.register.btn_border {background-color: #1c9fd7;padding:1em;color:#f2f2f2;font-weight:bold;}
+
 
 /* course_about.html  <-  */
 
