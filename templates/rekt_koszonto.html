@@ -1,0 +1,44 @@
+<%!
+from time import strftime as time
+from django.utils.translation import ugettext as _
+%>
+
+<style>
+	#rekt_koszonto {background: none;width: 100%;color: #003e6d;box-shadow: none;}
+</style>
+<!-- Button trigger modal -->
+##<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+##  Launch demo modal
+##</button>
+
+<!-- Modal -->
+<div class="modal fade" id="rekt_koszonto" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+
+		 <!--iframe width="560" height="315" src="https://www.youtube.com/embed/7WrH0qb-LHA" frameborder="0" allowfullscreen></iframe-->
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+	//$('#rekt_koszonto').modal('show');
+	var yv_add_on_event_iframe = '<iframe width="560" height="315" src="https://www.youtube.com/embed/7WrH0qb-LHA?autoplay=1" frameborder="0" allowfullscreen></iframe>';
+	function yv_add_on_event() {
+		$('#rekt_koszonto').on('show.bs.modal', function (event) {
+			console.log('rekt_koszonto s');
+			$('#rekt_koszonto .modal-body').html(yv_add_on_event_iframe);
+		});
+		$('#rekt_koszonto').on('hide.bs.modal', function (event) {
+			console.log('rekt_koszonto h');
+			$('#rekt_koszonto .modal-body').html('');
+		});
+	}
+	yv_add_on_event();
+
+
+
+</script>
