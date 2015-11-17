@@ -1,5 +1,4 @@
 <%!
-  import json
   from django.utils.translation import ugettext as _
   from microsite_configuration import microsite
 %>
@@ -100,9 +99,15 @@
 			<div class="col-xs-12 col-sm-10 col-md-10">
 				<ul class="courses-listing row">
 					%for course in courses:
+					    %if user.is_staff or (hasattr(course, 'ispublic') and course.ispublic != False):
 						<li class="courses-listing-item0 col-xs-12 col-sm-6 col-md-4 parent_status">
+							%if hasattr(course, 'ispublic') and course.ispublic == False:
+								<b style="position: absolute;top: 0;right: 0;color: #FF005D;background-color: silver;font-size: 1.5em;z-index: 5">
+									Rejtett kurzus!</b>
+                            %endif
 						  <%include file="../course.html" args="course=course" />
 						</li>
+                        %endif
 					%endfor
 				</ul>
 			</div>
