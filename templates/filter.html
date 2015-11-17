@@ -15,10 +15,11 @@ from courseware.courses import course_image_url, get_course_about_section
 		<input type="hidden" name="csrfmiddlewaretoken" value="${ csrf_token }">
 		<input type="hidden" name="key" value="${key}" />
 		<input id="id_${key}" type="hidden" name="" value="" />
+		<input type="hidden" name="filter_courses" value="" />
 		<ul>
 			%for k, v in filter['show_list'].items():
 				<li class=" ${'' if filter["selected"] != k else ' selected'}">
-					<a onclick=" setFilterParams('${key}', 'list_key', '${k}')">${_(v)}</a>
+					<a data-filter='{"key":"${key}", "v":"${k}"}' onclick="setFilterParams('${key}', 'list_key', '${k}')">${_(v)}</a>
 				</li>
 			%endfor
 		</ul>
@@ -27,6 +28,15 @@ from courseware.courses import course_image_url, get_course_about_section
 </article>
 <script>
 	function setFilterParams(key, name, value) {
+		var selected_list = [];
+		$("#filter_box li").each(function(index, listItem){
+			if($(listItem).hasClass('selected')){
+				var a_item_data = JSON.parse($(listItem).find('a').attr('data-filter'));
+				selected_list.push(a_item_data.v);
+			}
+		});
+		$('[name=filter_courses]').attr('value', selected_list.join('|'));
+
 		$('#id_' + key).attr('name', name);
 		$('#id_' + key).attr('value', value);
 		$('#form_id_' + key).submit();
