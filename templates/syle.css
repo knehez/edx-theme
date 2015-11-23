@@ -121,6 +121,18 @@ header.global .user > .primary > a {padding-bottom: 0;height: 100%;}
     font: 2em/1em "Open Sans",Verdana,Geneva,sans-serif,sans-serif;left: 50%;margin-left: -9px;margin-top: -15px;
     position: absolute;text-shadow: 0 -1px rgba(0, 0, 0, 0.8);top: 50%;}
 
+.wrapper-footer .szechenyi2020_fixed {text-align: right;position: fixed;right: 0;top: 0;z-index: 3;}
+.wrapper-footer .szechenyi2020_fixed a {display: block;}
+.wrapper-footer .szechenyi2020_fixed img {height: 150px;}
+.wrapper-footer .szechenyi2020_fixed {display: none;}
+
+.wrapper-footer footer#footer-openedx .references {float: right;}
+.wrapper-footer footer#footer-openedx .szechenyi2020 {text-align: right;float: right;margin: -10px 5px 2px 20px;}
+.wrapper-footer footer#footer-openedx .szechenyi2020 a {display: block;}
+.wrapper-footer footer#footer-openedx .szechenyi2020 img {height: 150px;}
+
+
+
 
 .course-image,
 .course-image {border-bottom: 1px solid #40b4e6;}
@@ -318,7 +330,12 @@ section.outside-app.tj h1 {color: #126f9a;font-size: 1.4em;}
 /* boostrap overwrite  <-  */
 
 
-
+@media (min-width: 1680px) and (max-width: 7680px) {
+    .wrapper-footer .szechenyi2020_fixed {display: block;}
+    .wrapper-footer .szechenyi2020 {display: none;}
+}
+@media (min-width: 1250px) and (max-width: 1680px) {
+}
 @media (min-width: 768px) and (max-width: 1250px) {
  .videogular-container {width: 728px;height: 409.5px;}
   header.global .menu_margin {margin: 0.3em 1em 0 0;}
