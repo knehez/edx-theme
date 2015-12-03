@@ -126,15 +126,26 @@
 			<script>
 				$( "#search_title" ).keydown(function(event) {
 					setTimeout(function(){
+
+						var search_text = $("#search_title").attr('value').toLowerCase();
+
 						$('.course_info .course-title').each(function( index, element ) {
-							var search_text = $("#search_title").attr('value').toLowerCase();
+
 							var display_val = 'block';
 
 							if ($(element).html().toLowerCase().indexOf(search_text) == -1) {
 								display_val = 'none';
 							}
 							$(this).closest('.parent_status').css('display', display_val);
+						});
+
+						$('.course_info .course-code').each(function( index, element ) {
+
+							if ($(element).html().toLowerCase().indexOf(search_text) != -1) {
+								$(this).closest('.parent_status').css('display', 'block');
+							}
 						})
+
 					}, 500);
 				});
 				%if 'search_text' in req_data:

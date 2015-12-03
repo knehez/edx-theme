@@ -1,0 +1,79 @@
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+##<%block name="pagetitle">${_("Page Not Found")}</%block>
+
+
+<style>
+	section.outside-app.tj .pl2em {padding-left: 2em;}
+	section.outside-app.tj .pl2em a {display: block;}
+</style>
+<section class="outside-app tj">
+	<h1>${_("Guide")}</h1>
+	Kedves Érdeklődő!
+	<br /><br />Ha először jár oldalunkon, kérem, szánjon egy percet ennek az útmutatónak az elolvasására.
+	<br /><br />A MeMOOC online informatikai egyetem nagyon sok kurzust ajánl, egyúttal több tanulási útvonalat, melyek során korszerű programozói, rendszergazdai tudásra lehet szert tenni.
+	<br /><br />A MeMOOC gerincét 12 távoktatási modul alkotja, amelyek lefedik a 2 éves Mérnökinformatikus Felsőoktatási Szakképzés (FOSZ) anyagát. Ezek a tananyagok elméleti és gyakorlati részeket is tartalmaznak, sok videóval, ellenőrző kérdésekkel és néhány játékkal.
+	<br /><br />A 12 modul neve és kódja, abban a sorrendben, ahogy érdemes őket elvégezni:
+	<br /><br />
+	<div class="pl2em">Számítógép használat területén kezdőknek:
+		<br />K1 - Információs és kommunikációs technológiák, kódja: IT.K1.MODUL.0.H
+		<br /><br /><b>Kezdőknek szóló modulok:</b>
+		<br />I1 - Informatikai rendszerszemlélet, kódja: IT.I1.MODUL.0.H
+		<br />P1 - Programozási nyelvek alapjai, kódja: IT.P1.MODUL.0.H
+		<br />S1 - Számítógép-architektúrák, -hálózatok és biztonság, kódja: IT.S1.MODUL.0.H
+		<br /><br /><b>Középhaladóknak szóló modulok:</b>
+		<br />D1 - Adatbázis rendszerek és alkalmazásaik, kódja: IT.D1.MODUL.0.H
+		<br />P2 - Objektumorientált programozás, kódja: IT.P2.MODUL.0.H
+		<br />S2 - Számítógép hálózatok tervezése, kódja: IT.S2.MODUL.0.H
+		<br /><br /><b>Haladó programozók és/vagy rendszergazdák számára:</b>
+		<br />P3 - Alkalmazások fejlesztése és üzemeltetése, kódja: IT.P3.MODUL.0.H
+		<br />S3 - Szerverüzemeltetés, kódja: IT.S3.MODUL.0.H
+		<br /><br /><b>Azok számára, akik a munkaerő piacon keresett ismeretekre vágynak:</b>
+		<br />MM1 - Multimédiás anyagok készítése, kódja: IT.MM1.MODUL.0.H
+		<br />WP1 - Web programozás, kódja: IT.WP1.MODUL.0.H
+		<br />MP1 - Mobil programozás, kódja: IT.MP1.MODUL.0.H
+	</div>
+	<br /><br /><b>A 12 távoktatási modult csoportosíthatjuk témakörök szerint is:</b>
+	<div class="pl2em">
+		<br /><b>Informatikai alapismeretek: K1, I1</b>
+		<br /><b>Programozás: P1, P2, P3</b>
+		<br /><b>Rendszergazdai ismeretek: S1, S2, S3</b>
+		<br /><b>Adatbázis kezelés: D1</b>
+		<br /><b>Webprogramozás: MM1, WP1</b>
+		<br /><b>Mobilprogramozás: MP1</b>
+	</div>
+	<br /><br />A távoktatási modulokat a kurzus kódjáról ismerjük fel, amely tartalmazza a „MODUL” szót és nincs „x” betű a végén. Azok a kurzusok, amelyek tartalmazzák a „MODUL” szót és „x” betű van a végükön, azok az úgynevezett könnyített modulok, amelyeket azoknak szánjuk, akik gyorsan szeretnének gyakorlati tudást szerezni elméleti alapozás nélkül.
+	<br /><br /><b>Akik teljesen kezdő programozók, azoknak érdemes a könnyített kurzusokkal kezdeniük, amelyek a következők:</b>
+	<div class="pl2em" id="couser_onclick_box">
+		<a href="#" >IT.K1.MODUL.0.Hx</a>
+		<a href="#" >IT.I1.MODUL.0.Hx</a>
+		<a href="#" >IT.D1.MODUL.0.Hx</a>
+		<a href="#" >IT.P1.MODUL.0.Hx</a>
+		<a href="#" >IT.P2.MODUL.0.Hx</a>
+		<a href="#" >IT.P3.MODUL.0.Hx</a>
+		<a href="#" >IT.S1.MODUL.0.Hx</a>
+		<a href="#" >IT.S2.MODUL.0.Hx</a>
+		<a href="#" >IT.S3.MODUL.0.Hx</a>
+		<a href="#" >IT.MM1.MODUL.0.Hx</a>
+		<a href="#" >IT.WP1.MODUL.0.Hx</a>
+		<a href="#" >IT.MP1.MODUL.0.Hx</a>
+	</div>
+	<br /><br />Minden nagy távoktatási <b>modul alá további gyakorlatközpontú kurzusok is tartoznak</b>, amelyek egyrészt kibővítik az alap modul elvégzése során megszerzett ismereteket, másrészt <b>egy-egy Mérnökinformatikus BSc tárgy gyakorlatához</b> taroznak.
+	<br /><br />Pl. a P2 modulhoz kurzusok kurzuskódjában szerepel a „P2” szó, de nem szerepel benne a „MODUL” szó. Pl.: <b>A „IT.P2.CPP.0.H” kódú kurzus a P2 modult egészíti ki és a „C++ programozása” Mérnökinformatikus BSc tárgy gyakorlatát fedi le.</b>
+	<br /><br />A MeMOOC oldal a Mérnökinformatikus Felsőoktatási Szakképzés távoktatási és levelezős képzési formát támogatja elsősorban, de minden érdeklődő számára nyitott!
+	<br /><br />Ha megtetszettek kurzusaink, folytassa tanulmányait a Miskolci Egyetemen!
+	<br /><br />Tisztelettel, a MeMOOC csapata
+
+	<script>
+		$('#couser_onclick_box a').click(function(event) {
+			var c_code = $(this).html();
+			$('#nav_search').val(c_code);
+			$('#search_menu_form').submit();
+			event.stopPropagation();
+			event.preventDefault();
+		});
+	</script>
+</section>
+
+
